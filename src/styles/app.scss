@@ -8,6 +8,9 @@ body {
   color: #fff;
   padding-top: 50px;
   margin: 0;
+  // Used to hide the overflow of the animated background
+  height: 100%;
+  overflow: hidden;
 }
 
 button {
@@ -97,12 +100,8 @@ button {
 
 // Designing the squares!
 .squares {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 95%;
-  height: 97%;
-  overflow: hidden;
   z-index: -100; // forcing it to be behind the board.
 }
 
