@@ -27,6 +27,7 @@ button {
     display: flex;
     flex-direction: row;
     border-bottom: 2px solid #fff;
+    // Specify that the squares on the bottom row DO NOT have that border on the bottom
     &:last-child {
       border-bottom: none;
     }
@@ -38,9 +39,11 @@ button {
       padding: 0;
       overflow: hidden;
       transition: all 0.2s;
+      // Specify that the last squares in each row DO NOT have that border on the right
       &:last-child {
         border-right: none;
       }
+      // The animation of the Xs/Os when there's a winner
       &.winning {
         animation: scaleText 1.5s ease-in infinite;
         @keyframes scaleText {
@@ -66,6 +69,7 @@ button {
   align-items: center;
 }
 
+// Colors of the text!
 .text-blue {
   color: $lightblue;
 }
@@ -116,6 +120,7 @@ button {
   bottom: -150px;
 }
 
+// The squares themselves
 .squares li:nth-child(1){
   left: 25%;
   width: 80px;
@@ -191,6 +196,7 @@ button {
   animation-duration: 11s;
 }
 
+// Animation of the squares!
 @keyframes squares {
   0%{
       transform: translateY(0) rotate(0deg);

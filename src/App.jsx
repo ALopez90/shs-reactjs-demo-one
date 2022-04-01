@@ -34,11 +34,13 @@ const App = () => {
     setIsNext(prev => !prev);
   };
 
+  // What the user sees!
   return (
-    // The actual game itself :) What the user sees!
     <div className="app">
       <h1> TIC <span className="text-purple">TAC</span> TOE</h1>
+      {/* The message displayed right above the board and below the title */}
       <Messages winner={winner} board={board} isXNext={isXNext} />
+      {/* The game itself */}
       <Board
         board={board}
         handleSquareEvent={handleSquareEvent}
